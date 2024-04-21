@@ -14,15 +14,13 @@ def motor():
         case 1:
             print('A correia dentada do seu veículo esta com perda de tensão')
         case 2:
-            print(
-                'Seu veículo está queimando óleo devido a vazamentos ou desgaste de peças internas')
+            print('Seu veículo está queimando óleo devido a vazamentos ou desgaste de peças internas')
         case 3:
             print('As velas de Ignição do seu veículo estão gastas')
         case 4:
             print('O sistema de combustível esta com problemas')
         case 5:
             print('Seu veículo esta com vazamento de óleo do carter')
-
 
 def transmissao():
     verificador = range(1, 6)
@@ -44,10 +42,9 @@ def transmissao():
         case 3:
             print('Seu veículo esta com desgaste do disco ou platô da embreagem')
         case 4:
-            print('Disco da embreagem empenado')
+            print('Seu veículo esta com disco da embreagem empenado')
         case 5:
-            print('Vazamento de fluido hidráulico da embreagem')
-
+            print('Seu veículo esta com vazamento de fluido hidráulico da embreagem')
 
 def suspencao_e_direcao():
     verificador = range(1, 6)
@@ -73,7 +70,6 @@ def suspencao_e_direcao():
         case 5:
             print('Seu veículo esta com vazamento de fluido de direção hidráulica')
 
-
 def freios():
     verificador = range(1, 6)
     while True:
@@ -88,20 +84,15 @@ def freios():
 
     match resposta:
         case 1:
-            print(
-                'Seu veículo esta com ar no sistema de freios devido a sangramento inadequado')
+            print('Seu veículo esta com ar no sistema de freios devido a sangramento inadequado')
         case 2:
-            print(
-                'Seu veículo esta com pastilhas de freio desgastadas até o indicador de desgaste')
+            print('Seu veículo esta com pastilhas de freio desgastadas até o indicador de desgaste')
         case 3:
-            print(
-                'Seu veículo esta com discos de freio empenados devido a aquecimento excessivo')
+            print('Seu veículo esta com discos de freio empenados devido a aquecimento excessivo')
         case 4:
             print('Seu veículo esta com desgaste desigual das pastilhas de freio')
         case 5:
-            print(
-                'Seu veículo esta com vazamento nos cilindros mestre ou cilindros de roda')
-
+            print('Seu veículo esta com vazamento nos cilindros mestre ou cilindros de roda')
 
 def alternador():
     verificador = range(1, 6)
@@ -127,7 +118,6 @@ def alternador():
         case 5:
             print('Seu veículo esta com rolamentos do alternador desgastados')
 
-
 def motorArranque():
     verificador = range(1, 6)
     while True:
@@ -148,7 +138,6 @@ def motorArranque():
             print('Seu veículo esta com problemas de combustível (falta de combustível ou problemas no sistema de injeção)')
         case 4:
             print('Seu veículo esta com sobrecarga elétrica no motor de arranque')
-
 
 def SistemaIluminacao():
     verificador = range(1, 6)
@@ -173,7 +162,6 @@ def SistemaIluminacao():
             print('Seu veículo esta com faróis desalinhados devido a impactos')
         case 5:
             print('Seu veículo esta com entrada de umidade nos faróis devido a vedação defeituosa')
-
 
 def SistemaIgnicao():
     verificador = range(1, 6)

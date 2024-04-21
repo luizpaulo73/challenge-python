@@ -1,4 +1,3 @@
-from problemas import *
 from perguntas import *
 
 tipoProblema = 0
