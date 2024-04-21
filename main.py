@@ -10,6 +10,15 @@ localizacao = int(input('Digite o numero correspondente a sua região: '
                         '\n2- Zona Oeste'
                         '\n3- Zona Leste'
                         '\n4- Zona Sul\n'))
+match localizacao:
+    case 1:
+        localizacao = 'Zona Norte'
+    case 2:
+        localizacao = 'Zona Oeste'
+    case 3:
+        localizacao = 'Zona Leste'
+    case 4:
+        localizacao = 'Zona Sul'
 
 while tipoProblema != 1 and tipoProblema != 2:
     tipoProblema = int(
