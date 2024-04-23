@@ -42,9 +42,9 @@ if tipoProblema == 1:
         case 2:
             motorArranque()
         case 3:
-            SistemaIluminacao()
+            sistemaIluminacao()
         case 4:
-            SistemaIgnicao()
+            sistemaIgnicao()
 
 else:
     while True:

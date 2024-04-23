@@ -139,7 +139,7 @@ def motorArranque():
         case 4:
             print('Seu veículo esta com sobrecarga elétrica no motor de arranque')
 
-def SistemaIluminacao():
+def sistemaIluminacao():
     verificador = range(1, 6)
     while True:
         resposta = int(input('Digite o número correspondente ao problema: '
@@ -163,7 +163,7 @@ def SistemaIluminacao():
         case 5:
             print('Seu veículo esta com entrada de umidade nos faróis devido a vedação defeituosa')
 
-def SistemaIgnicao():
+def sistemaIgnicao():
     verificador = range(1, 6)
     while True:
         resposta = int(input('Digite o número correspondente ao problema: '
