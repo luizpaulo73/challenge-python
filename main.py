@@ -5,20 +5,27 @@ verificador = range(1, 5)
 
 carroMarca = input('Digite a marca do seu carro: ')
 carroModelo = input('Digite o modelo do seu carro: ')
-localizacao = int(input('Digite o numero correspondente a sua região: '
-                        '\n1- Zona Norte'
-                        '\n2- Zona Oeste'
-                        '\n3- Zona Leste'
-                        '\n4- Zona Sul\n'))
-match localizacao:
-    case 1:
-        localizacao = 'Zona Norte'
-    case 2:
-        localizacao = 'Zona Oeste'
-    case 3:
-        localizacao = 'Zona Leste'
-    case 4:
-        localizacao = 'Zona Sul'
+
+while True:
+    localizacao = int(input('Digite o numero correspondente a sua região: '
+                            '\n1- Zona Norte'
+                            '\n2- Zona Oeste'
+                            '\n3- Zona Leste'
+                            '\n4- Zona Sul\n'))
+    if localizacao in verificador:
+        break
+    
+    else:
+        print('Digite um valor válido!')
+    match localizacao:
+        case 1:
+            localizacao = 'Zona Norte'
+        case 2:
+            localizacao = 'Zona Oeste'
+        case 3:
+            localizacao = 'Zona Leste'
+        case 4:
+            localizacao = 'Zona Sul'
 
 while tipoProblema != 1 and tipoProblema != 2:
     tipoProblema = int(

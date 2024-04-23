@@ -9,6 +9,8 @@ def motor():
                              '\n5- Se há vazamentos visíveis de fluidos do motor\n'))
         if resposta in verificador:
             break
+        else:
+            print('Digite um valor válido!')
 
     match resposta:
         case 1:
@@ -33,6 +35,8 @@ def transmissao():
                              '\n5- Se o veículo está se movendo mesmo com o pedal da embreagem totalmente pressionado\n'))
         if resposta in verificador:
             break
+        else:
+            print('Digite um valor válido!')
 
     match resposta:
         case 1:
@@ -57,6 +61,8 @@ def suspencao_e_direcao():
                              '\n5- Você nota vazamentos de fluido sob o veículo próximo às rodas dianteiras\n'))
         if resposta in verificador:
             break
+        else:
+            print('Digite um valor válido!')
 
     match resposta:
         case 1:
@@ -81,6 +87,8 @@ def freios():
                              '\n5- Você percebe vazamento de fluido de freio próximo às rodas ou sob o veículo\n'))
         if resposta in verificador:
             break
+        else:
+            print('Digite um valor válido!')
 
     match resposta:
         case 1:
@@ -105,6 +113,8 @@ def alternador():
                              '\n5- Você notou algum ruído estranho vindo do compartimento do motor, especialmente próximo ao alternador\n'))
         if resposta in verificador:
             break
+        else:
+            print('Digite um valor válido!')
 
     match resposta:
         case 1:
@@ -128,6 +138,8 @@ def motorArranque():
                              '\n4- Você percebeu algum cheiro de queimado vindo do compartimento do motor ao tentar dar partida no veículo'))
         if resposta in verificador:
             break
+        else:
+            print('Digite um valor válido!')
 
     match resposta:
         case 1:
@@ -150,6 +162,8 @@ def sistemaIluminacao():
                              '\n5- Você percebeu que os faróis estão embaçados ou com condensação interna\n'))
         if resposta in verificador:
             break
+        else:
+            print('Digite um valor válido!')
 
     match resposta:
         case 1:
@@ -174,6 +188,8 @@ def sistemaIgnicao():
                              '\n5- Você percebeu algum cheiro de combustível não queimado saindo do escapamento\n'))
         if resposta in verificador:
             break
+        else:
+            print('Digite um valor válido!')
 
     match resposta:
         case 1:
