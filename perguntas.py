@@ -1,5 +1,8 @@
 def motor():
+    # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
     verificador = range(1, 6)
+    
+    # Loop para solicitar ao usuário que selecione o problema do motor até que uma resposta válida seja fornecida
     while True:
         resposta = int(input('Digite o número correspondente ao problema: '
                              '\n1- Se o motor está fazendo algum barulho incomum'
@@ -11,21 +14,25 @@ def motor():
             break
         else:
             print('Digite um valor válido!')
-
+    
+    # Correspondência da resposta do usuário com mensagens informativas sobre o problema do motor
     match resposta:
         case 1:
-            print('A correia dentada do seu veículo esta com perda de tensão')
+            print('A correia dentada do seu veículo está com perda de tensão')
         case 2:
             print('Seu veículo está queimando óleo devido a vazamentos ou desgaste de peças internas')
         case 3:
-            print('As velas de Ignição do seu veículo estão gastas')
+            print('As velas de ignição do seu veículo estão gastas')
         case 4:
-            print('O sistema de combustível esta com problemas')
+            print('O sistema de combustível está com problemas')
         case 5:
-            print('Seu veículo esta com vazamento de óleo do carter')
+            print('Seu veículo está com vazamento de óleo do cárter')
 
 def transmissao():
+    # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
     verificador = range(1, 6)
+    
+    # Loop para solicitar ao usuário que selecione o problema da transmissão até que uma resposta válida seja fornecida
     while True:
         resposta = int(input('Digite o número correspondente ao problema: '
                              '\n1- Se o pedal da embreagem está ficando preso ou afundando facilmente'
@@ -37,21 +44,25 @@ def transmissao():
             break
         else:
             print('Digite um valor válido!')
-
+    
+    # Correspondência da resposta do usuário com mensagens informativas sobre o problema da transmissão
     match resposta:
         case 1:
-            print('Seu veículo esta com o cabo de embreagem desgastado ou danificado')
+            print('Seu veículo está com o cabo de embreagem desgastado ou danificado')
         case 2:
-            print('Seu veículo esta com desgaste excessivo do disco da embreagem')
+            print('Seu veículo está com desgaste excessivo do disco da embreagem')
         case 3:
-            print('Seu veículo esta com desgaste do disco ou platô da embreagem')
+            print('Seu veículo está com desgaste do disco ou platô da embreagem')
         case 4:
-            print('Seu veículo esta com disco da embreagem empenado')
+            print('Seu veículo está com disco da embreagem empenado')
         case 5:
-            print('Seu veículo esta com vazamento de fluido hidráulico da embreagem')
+            print('Seu veículo está com vazamento de fluido hidráulico da embreagem')
 
 def suspencao_e_direcao():
+    # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
     verificador = range(1, 6)
+    
+    # Loop para solicitar ao usuário que selecione o problema de suspensão e direção até que uma resposta válida seja fornecida
     while True:
         resposta = int(input('Digite o número correspondente ao problema: '
                              '\n1- Você sente vibrações excessivas no volante ao dirigir em alta velocidade'
@@ -64,20 +75,24 @@ def suspencao_e_direcao():
         else:
             print('Digite um valor válido!')
 
+    # Correspondência da resposta do usuário com mensagens informativas sobre o problema de suspensão e direção
     match resposta:
         case 1:
-            print('Seu veículo esta com desgaste ou desalinhamento dos pneus')
+            print('Seu veículo está com desgaste ou desalinhamento dos pneus')
         case 2:
-            print('Seu veículo esta com os amortecedores desgastados ou com vazamento')
+            print('Seu veículo está com os amortecedores desgastados ou com vazamento')
         case 3:
-            print('Seu veículo esta com as buchas da suspensão desgastadas')
+            print('Seu veículo está com as buchas da suspensão desgastadas')
         case 4:
-            print('Seu veículo esta com baixo nível de fluido de direção hidráulica')
+            print('Seu veículo está com baixo nível de fluido de direção hidráulica')
         case 5:
-            print('Seu veículo esta com vazamento de fluido de direção hidráulica')
+            print('Seu veículo está com vazamento de fluido de direção hidráulica')
 
 def freios():
+    # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
     verificador = range(1, 6)
+    
+    # Loop para solicitar ao usuário que selecione o problema de freios até que uma resposta válida seja fornecida
     while True:
         resposta = int(input('Digite o número correspondente ao problema: '
                              '\n1- Você nota que o pedal do freio está afundando até o fundo ou parece esponjoso'
@@ -90,20 +105,24 @@ def freios():
         else:
             print('Digite um valor válido!')
 
+    # Correspondência da resposta do usuário com mensagens informativas sobre o problema nos freios
     match resposta:
         case 1:
-            print('Seu veículo esta com ar no sistema de freios devido a sangramento inadequado')
+            print('Seu veículo está com ar no sistema de freios devido a sangramento inadequado')
         case 2:
-            print('Seu veículo esta com pastilhas de freio desgastadas até o indicador de desgaste')
+            print('Seu veículo está com pastilhas de freio desgastadas até o indicador de desgaste')
         case 3:
-            print('Seu veículo esta com discos de freio empenados devido a aquecimento excessivo')
+            print('Seu veículo está com discos de freio empenados devido a aquecimento excessivo')
         case 4:
-            print('Seu veículo esta com desgaste desigual das pastilhas de freio')
+            print('Seu veículo está com desgaste desigual das pastilhas de freio')
         case 5:
-            print('Seu veículo esta com vazamento nos cilindros mestre ou cilindros de roda')
+            print('Seu veículo está com vazamento nos cilindros mestre ou cilindros de roda')
 
 def alternador():
+    # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
     verificador = range(1, 6)
+    
+    # Loop para solicitar ao usuário que selecione o problema com o alternador até que uma resposta válida seja fornecida
     while True:
         resposta = int(input('Digite o número correspondente ao problema: '
                              '\n1- Você percebeu que a luz de carga da bateria no painel de instrumentos está acesa constantemente enquanto o veículo está em funcionamento'
@@ -116,20 +135,24 @@ def alternador():
         else:
             print('Digite um valor válido!')
 
+    # Correspondência da resposta do usuário com mensagens informativas sobre o problema com o alternador
     match resposta:
         case 1:
-            print('Seu veículo esta com falha no alternador em fornecer energia suficiente para carregar a bateria')
+            print('Seu veículo está com falha no alternador em fornecer energia suficiente para carregar a bateria')
         case 2:
-            print('Seu veículo esta com falha no alternador em recarregar a bateria adequadamente durante a operação do veículo')
+            print('Seu veículo está com falha no alternador em recarregar a bateria adequadamente durante a operação do veículo')
         case 3:
-            print('Seu veículo esta com sobrecarga do alternador')
+            print('Seu veículo está com sobrecarga do alternador')
         case 4:
-            print('Seu veículo esta com alternador fornecendo voltagem inadequada')
+            print('Seu veículo está com alternador fornecendo voltagem inadequada')
         case 5:
-            print('Seu veículo esta com rolamentos do alternador desgastados')
+            print('Seu veículo está com rolamentos do alternador desgastados')
 
 def motorArranque():
+    # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
     verificador = range(1, 6)
+    
+    # Loop para solicitar ao usuário que selecione o problema com o motor de arranque até que uma resposta válida seja fornecida
     while True:
         resposta = int(input('Digite o número correspondente ao problema: '
                              '\n1- O motor de arranque não está girando quando você vira a chave para a posição de partida'
@@ -141,18 +164,22 @@ def motorArranque():
         else:
             print('Digite um valor válido!')
 
+    # Correspondência da resposta do usuário com mensagens informativas sobre o problema com o motor de arranque
     match resposta:
         case 1:
-            print('Seu veículo esta com falha no motor de arranque')
+            print('Seu veículo está com falha no motor de arranque')
         case 2:
-            print('Seu veículo esta com solenóide defeituoso no motor de arranque')
+            print('Seu veículo está com solenóide defeituoso no motor de arranque')
         case 3:
-            print('Seu veículo esta com problemas de combustível (falta de combustível ou problemas no sistema de injeção)')
+            print('Seu veículo está com problemas de combustível (falta de combustível ou problemas no sistema de injeção)')
         case 4:
-            print('Seu veículo esta com sobrecarga elétrica no motor de arranque')
+            print('Seu veículo está com sobrecarga elétrica no motor de arranque')
 
 def sistemaIluminacao():
+    # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
     verificador = range(1, 6)
+    
+    # Loop para solicitar ao usuário que selecione o problema com o sistema de iluminação até que uma resposta válida seja fornecida
     while True:
         resposta = int(input('Digite o número correspondente ao problema: '
                              '\n1- Você notou que uma ou mais lâmpadas do veículo não estão funcionando corretamente'
@@ -165,20 +192,24 @@ def sistemaIluminacao():
         else:
             print('Digite um valor válido!')
 
+    # Correspondência da resposta do usuário com mensagens informativas sobre o problema com o sistema de iluminação
     match resposta:
         case 1:
-            print('Seu veículo esta com lâmpadas queimadas, fusíveis queimados')
+            print('Seu veículo está com lâmpadas queimadas, fusíveis queimados')
         case 2:
-            print('Seu veículo esta com problemas no regulador de voltagem')
+            print('Seu veículo está com problemas no regulador de voltagem')
         case 3:
-            print('Seu veículo esta com alternador com voltagem irregular')
+            print('Seu veículo está com alternador com voltagem irregular')
         case 4:
-            print('Seu veículo esta com faróis desalinhados devido a impactos')
+            print('Seu veículo está com faróis desalinhados devido a impactos')
         case 5:
-            print('Seu veículo esta com entrada de umidade nos faróis devido a vedação defeituosa')
+            print('Seu veículo está com entrada de umidade nos faróis devido a vedação defeituosa')
 
 def sistemaIgnicao():
+    # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
     verificador = range(1, 6)
+    
+    # Loop para solicitar ao usuário que selecione o problema com o sistema de ignição até que uma resposta válida seja fornecida
     while True:
         resposta = int(input('Digite o número correspondente ao problema: '
                              '\n1- O veículo está tendo dificuldades para ligar ou não liga de todo'
@@ -191,14 +222,15 @@ def sistemaIgnicao():
         else:
             print('Digite um valor válido!')
 
+    # Correspondência da resposta do usuário com mensagens informativas sobre o problema com o sistema de ignição
     match resposta:
         case 1:
-            print('Seu veículo esta com problemas nas velas de ignição')
+            print('Seu veículo está com problemas nas velas de ignição')
         case 2:
-            print('Seu veículo esta com cabos de vela danificados')
+            print('Seu veículo está com cabos de vela danificados')
         case 3:
-            print('Seu veículo esta com problemas com o sensor de temperatura do motor')
+            print('Seu veículo está com problemas com o sensor de temperatura do motor')
         case 4:
-            print('Seu veículo esta com problemas com o relé de partida')
+            print('Seu veículo está com problemas com o relé de partida')
         case 5:
-            print('Seu veículo esta com problemas de ignição que resultam em combustão incompleta')
+            print('Seu veículo está com problemas de ignição que resultam em combustão incompleta')
