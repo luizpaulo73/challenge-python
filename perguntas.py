@@ -19,15 +19,22 @@ def motor():
     match resposta:
         case 1:
             print('A correia dentada do seu veículo está com perda de tensão')
+            precos = [595.85 , 789.90 , 395.00 , 279.90 , 542.99]
         case 2:
             print('Seu veículo está queimando óleo devido a vazamentos ou desgaste de peças internas')
+            precos = []
         case 3:
             print('As velas de ignição do seu veículo estão gastas')
+            precos = [141.70 , 218.90 , 208.23 , 124.99 , 95.04]
         case 4:
             print('O sistema de combustível está com problemas')
+            precos = []
         case 5:
             print('Seu veículo está com vazamento de óleo do cárter')
+            precos = []
+    return precos
 
+# ja foi
 def transmissao():
     # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
     verificador = range(1, 6)
@@ -49,14 +56,20 @@ def transmissao():
     match resposta:
         case 1:
             print('Seu veículo está com o cabo de embreagem desgastado ou danificado')
+            precos = [454.41 , 319.99 , 333 , 158 , 225.15]
         case 2:
             print('Seu veículo está com desgaste excessivo do disco da embreagem')
+            precos = [546.26 , 301.41 , 599.99 , 403.37 , 232.05]
         case 3:
             print('Seu veículo está com desgaste do disco ou platô da embreagem')
+            precos = [546.26 , 301.41 , 599.99 , 403.37 , 232.05]
         case 4:
             print('Seu veículo está com disco da embreagem empenado')
+            precos = [546.26 , 301.41 , 599.99 , 403.37 , 232.05]
         case 5:
             print('Seu veículo está com vazamento de fluido hidráulico da embreagem')
+            precos = [148.41 , 178 , 133.94 , 103 , 124.26]
+    return precos
 
 def suspencao_e_direcao():
     # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
@@ -79,14 +92,20 @@ def suspencao_e_direcao():
     match resposta:
         case 1:
             print('Seu veículo está com desgaste ou desalinhamento dos pneus')
+            precos = [150 , 200 , 300 , 100]
         case 2:
             print('Seu veículo está com os amortecedores desgastados ou com vazamento')
+            precos = [530.99 , 999.99 , 599.99 , 450.45 , 479.90]
         case 3:
             print('Seu veículo está com as buchas da suspensão desgastadas')
+            precos = [177.19 , 153 , 140.60 , 289.90 , 165.90]
         case 4:
             print('Seu veículo está com baixo nível de fluido de direção hidráulica')
+            precos = []
         case 5:
             print('Seu veículo está com vazamento de fluido de direção hidráulica')
+            precos = []
+    return precos
 
 def freios():
     # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
@@ -109,14 +128,20 @@ def freios():
     match resposta:
         case 1:
             print('Seu veículo está com ar no sistema de freios devido a sangramento inadequado')
+            precos = []
         case 2:
             print('Seu veículo está com pastilhas de freio desgastadas até o indicador de desgaste')
+            precos = [136 , 454.03 , 418.40 , 253.90 , 171.90]
         case 3:
             print('Seu veículo está com discos de freio empenados devido a aquecimento excessivo')
+            precos = []
         case 4:
             print('Seu veículo está com desgaste desigual das pastilhas de freio')
+            precos = [150 , 200 , 300 , 100]
         case 5:
             print('Seu veículo está com vazamento nos cilindros mestre ou cilindros de roda')
+            precos = []
+    return precos
 
 def alternador():
     # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
@@ -139,14 +164,20 @@ def alternador():
     match resposta:
         case 1:
             print('Seu veículo está com falha no alternador em fornecer energia suficiente para carregar a bateria')
+            precos = []
         case 2:
             print('Seu veículo está com falha no alternador em recarregar a bateria adequadamente durante a operação do veículo')
+            precos = []
         case 3:
             print('Seu veículo está com sobrecarga do alternador')
+            precos = []
         case 4:
             print('Seu veículo está com alternador fornecendo voltagem inadequada')
+            precos = []
         case 5:
             print('Seu veículo está com rolamentos do alternador desgastados')
+            precos = []
+    return precos
 
 def motorArranque():
     # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
@@ -168,12 +199,17 @@ def motorArranque():
     match resposta:
         case 1:
             print('Seu veículo está com falha no motor de arranque')
+            precos = []
         case 2:
             print('Seu veículo está com solenóide defeituoso no motor de arranque')
+            precos = []
         case 3:
             print('Seu veículo está com problemas de combustível (falta de combustível ou problemas no sistema de injeção)')
+            precos = []
         case 4:
             print('Seu veículo está com sobrecarga elétrica no motor de arranque')
+            precos = []
+    return precos
 
 def sistemaIluminacao():
     # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
@@ -196,14 +232,20 @@ def sistemaIluminacao():
     match resposta:
         case 1:
             print('Seu veículo está com lâmpadas queimadas, fusíveis queimados')
+            precos = []
         case 2:
             print('Seu veículo está com problemas no regulador de voltagem')
+            precos = []
         case 3:
             print('Seu veículo está com alternador com voltagem irregular')
+            precos = []
         case 4:
             print('Seu veículo está com faróis desalinhados devido a impactos')
+            precos = []
         case 5:
             print('Seu veículo está com entrada de umidade nos faróis devido a vedação defeituosa')
+            precos = []
+    return precos
 
 def sistemaIgnicao():
     # Definindo um intervalo de verificação para garantir que a resposta do usuário seja válida
@@ -226,11 +268,17 @@ def sistemaIgnicao():
     match resposta:
         case 1:
             print('Seu veículo está com problemas nas velas de ignição')
+            precos = [141.70 , 218.90 , 208.23 , 124.99 , 95.04]
         case 2:
             print('Seu veículo está com cabos de vela danificados')
+            precos = []
         case 3:
             print('Seu veículo está com problemas com o sensor de temperatura do motor')
+            precos = []
         case 4:
             print('Seu veículo está com problemas com o relé de partida')
+            precos = []
         case 5:
             print('Seu veículo está com problemas de ignição que resultam em combustão incompleta')
+            precos = []
+    return precos
