@@ -2,6 +2,13 @@ tipoProblema = 0
 verificador = range(1, 5)
 verificador2 = range(1, 6)  # Verificador para garantir entrada válida
 
+# Solicitando informações do carro ao usuário
+
+def inputs():
+    carroMarca = input('Digite a marca do seu carro: ')
+    carroModelo = input('Digite o modelo do seu carro: ')
+    return carroMarca, carroModelo
+
 # Loop para garantir que o usuário digite uma localização válida
 def localizacao():
     regioes = ['Zona Norte', 'Zona Oeste', 'Zona Leste', 'Zona Sul']
@@ -68,31 +75,24 @@ def eletrico():
                 # Correspondência da resposta do usuário com mensagens informativas sobre o problema com o alternador
             match resposta:
                 case 1:
-                    print('Seu veículo está com falha no alternador em fornecer energia suficiente para carregar a bateria')
+                    print(
+                        'Seu veículo está com falha no alternador em fornecer energia suficiente para carregar a bateria')
                     precos = [557.55, 932.48, 855.95, 900.22, 693.39]
-                    problema = "Falha no alternador em fornecer energia suficiente para carregar a bateria"
-                    
                 case 2:
-                    print('Seu veículo está com falha no alternador em recarregar a bateria adequadamente durante a operação do veículo')
+                    print(
+                        'Seu veículo está com falha no alternador em recarregar a bateria adequadamente durante a operação do veículo')
                     precos = [557.55, 932.48, 855.95, 900.22, 693.39]
-                    problema = "Falha no alternador em recarregar a bateria adequadamente durante a operação do veículo"
-                    
                 case 3:
                     print('Seu veículo está com sobrecarga do alternador')
                     precos = [557.55, 932.48, 855.95, 900.22, 693.39]
-                    problema = "Sobrecarga do alternador"
-                    
                 case 4:
-                    print('Seu veículo está com alternador fornecendo voltagem inadequada')
+                    print(
+                        'Seu veículo está com alternador fornecendo voltagem inadequada')
                     precos = [144.90, 47.84, 139.90, 119, 158.06]
-                    problema = "Alternador fornecendo voltagem inadequada"
-                    
                 case 5:
                     print('Seu veículo está com rolamentos do alternador desgastados')
                     precos = [63.90, 131.90, 99.90, 127.79, 57.21]
-                    problema = "Rolamentos do alternador desgastados"
-
-            return precos , problema
+            return precos
 
         case 2:
             while True:
@@ -111,24 +111,18 @@ def eletrico():
                 case 1:
                     print('Seu veículo está com falha no motor de arranque')
                     precos = [479, 162.90, 548, 651.90, 470.44]
-                    problema = "Falha no motor de arranque"
-                    
                 case 2:
                     print('Seu veículo está com falha no motor de arranque')
                     precos = [479, 162.90, 548, 651.90, 470.44]
-                    problema = "Falha no motor de arranque"
-                    
                 case 3:
-                    print('Seu veículo está com problemas de combustível (falta de combustível ou problemas no sistema de injeção)')
+                    print(
+                        'Seu veículo está com problemas de combustível (falta de combustível ou problemas no sistema de injeção)')
                     precos = [74.90, 99.23, 125, 185.86, 174.90]
-                    problema = "Problemas de combustível (falta de combustível ou problemas no sistema de injeção)"
-                    
                 case 4:
-                    print('Seu veículo está com sobrecarga elétrica no motor de arranque')
+                    print(
+                        'Seu veículo está com sobrecarga elétrica no motor de arranque')
                     precos = [557.55, 932.48, 855.95, 900.22, 693.39]
-                    problema = "Sobrecarga elétrica no motor de arranque"
-
-            return precos , problema
+            return precos
 
         case 3:
             # Loop para solicitar ao usuário que selecione o problema com o sistema de iluminação até que uma resposta válida seja fornecida
@@ -148,24 +142,17 @@ def eletrico():
                 case 1:
                     print('Seu veículo está com lâmpadas queimadas')
                     precos = [33.90, 38.75, 71.01, 39.52, 45.90]
-                    problema = "Lâmpadas queimadas"
-                    
                 case 2:
                     print('Seu veículo está com problemas no regulador de voltagem')
                     precos = [251.75, 219.90, 284.05, 281, 160.54]
-                    problema = "Problemas no regulador de voltagem"
-                    
                 case 3:
                     print('Seu veículo está com alternador com voltagem irregular')
                     precos = [557.55, 932.48, 855.95, 900.22, 693.39]
-                    problema = "Alternador com voltagem irregular"
-                    
                 case 4:
-                    print('Seu veículo está com entrada de umidade nos faróis devido a vedação defeituosa')
+                    print(
+                        'Seu veículo está com entrada de umidade nos faróis devido a vedação defeituosa')
                     precos = [82.76, 199.90, 69, 79.80, 41.80]
-                    problema = "Entrada de umidade nos faróis devido a vedação defeituosa"
-
-            return precos , problema
+            return precos
         case 4:
             # Loop para solicitar ao usuário que selecione o problema com o sistema de ignição até que uma resposta válida seja fornecida
             while True:
@@ -185,29 +172,21 @@ def eletrico():
                 case 1:
                     print('Seu veículo está com problemas nas velas de ignição')
                     precos = [141.70, 218.90, 208.23, 124.99, 95.04]
-                    problema = "Problemas nas velas de ignição"
-                    
                 case 2:
                     print('Seu veículo está com cabos de vela danificados')
                     precos = [141.70, 218.90, 208.23, 124.99, 95.04]
-                    problema = "Cabos de vela danificados"
-                    
                 case 3:
-                    print('Seu veículo está com problemas com o sensor de temperatura do motor')
+                    print(
+                        'Seu veículo está com problemas com o sensor de temperatura do motor')
                     precos = [42, 30.90, 69.76, 34.50, 34.99]
-                    problema = "Problemas no sensor de temperatura do motor"
-                    
                 case 4:
                     print('Seu veículo está com problemas com o relé de partida')
                     precos = [34.69, 53.99, 75.30, 41.29, 71.90]
-                    problema = "Problemas no relé de partida"
-                    
                 case 5:
-                    print('Seu veículo está com problemas de ignição que resultam em combustão incompleta')
+                    print(
+                        'Seu veículo está com problemas de ignição que resultam em combustão incompleta')
                     precos = [141.70, 218.90, 208.23, 124.99, 95.04]
-                    problema = "Problemas de ignição resultando em combustão incompleta"
-
-            return precos , problema
+            return precos
 
 
 def mecanico():
@@ -242,23 +221,15 @@ def mecanico():
                 case 1:
                     print('A correia dentada do seu veículo está com perda de tensão')
                     precos = [595.85, 789.90, 395.00, 279.90, 542.99]
-                    problema = "Perda de tensão da correia dentada"
-                    
                 case 2:
                     print('As velas de ignição do seu veículo estão gastas')
                     precos = [141.70, 218.90, 208.23, 124.99, 95.04]
-                    problema = "Velas de ignição gastas"
-                    
                 case 3:
                     print('O sistema de combustível está com problemas')
                     precos = [185.96, 99.23, 125, 174.90, 217.80]
-                    problema = "Problemas no sistema de combustível"
-                    
                 case 4:
                     print('Seu veículo está com vazamento de óleo do cárter')
                     precos = [78.99, 132.90, 109.90, 65.78, 144.16]
-                    problema = "Vazamento de óleo do cárter"
-
 
         case 2:
             # Loop para solicitar ao usuário que selecione o problema da transmissão até que uma resposta válida seja fornecida
@@ -277,30 +248,24 @@ def mecanico():
             # Correspondência da resposta do usuário com mensagens informativas sobre o problema da transmissão
             match resposta:
                 case 1:
-                    print('Seu veículo está com o cabo de embreagem desgastado ou danificado')
+                    print(
+                        'Seu veículo está com o cabo de embreagem desgastado ou danificado')
                     precos = [454.41, 319.99, 333, 158, 225.15]
-                    problema = "Cabo de embreagem desgastado ou danificado"
-                    
                 case 2:
-                    print('Seu veículo está com desgaste excessivo do disco da embreagem')
+                    print(
+                        'Seu veículo está com desgaste excessivo do disco da embreagem')
                     precos = [546.26, 301.41, 599.99, 403.37, 232.05]
-                    problema = "Desgaste excessivo do disco da embreagem"
-                    
                 case 3:
-                    print('Seu veículo está com desgaste do disco ou platô da embreagem')
+                    print(
+                        'Seu veículo está com desgaste do disco ou platô da embreagem')
                     precos = [546.26, 301.41, 599.99, 403.37, 232.05]
-                    problema = "Desgaste do disco ou platô da embreagem"
-                    
                 case 4:
                     print('Seu veículo está com disco da embreagem empenado')
                     precos = [546.26, 301.41, 599.99, 403.37, 232.05]
-                    problema = "Disco da embreagem empenado"
-                    
                 case 5:
-                    print('Seu veículo está com vazamento de fluido hidráulico da embreagem')
+                    print(
+                        'Seu veículo está com vazamento de fluido hidráulico da embreagem')
                     precos = [148.41, 178, 133.94, 103, 124.26]
-                    problema = "Vazamento de fluido hidráulico da embreagem"
-
 
         case 3:
             while True:
@@ -319,23 +284,17 @@ def mecanico():
                 case 1:
                     print('Seu veículo está com desgaste ou desalinhamento dos pneus')
                     precos = [150, 200, 300, 100]
-                    problema = "Desgaste ou desalinhamento dos pneus"
-                    
                 case 2:
-                    print('Seu veículo está com os amortecedores desgastados ou com vazamento')
+                    print(
+                        'Seu veículo está com os amortecedores desgastados ou com vazamento')
                     precos = [530.99, 999.99, 599.99, 450.45, 479.90]
-                    problema = "Amortecedores desgastados ou com vazamento"
-                    
                 case 3:
                     print('Seu veículo está com as buchas da suspensão desgastadas')
                     precos = [177.19, 153, 140.60, 289.90, 165.90]
-                    problema = "Buchas da suspensão desgastadas"
-                    
                 case 4:
-                    print('Seu veículo está com baixo nível de fluido de direção hidráulica')
+                    print(
+                        'Seu veículo está com baixo nível de fluido de direção hidráulica')
                     precos = [130.65, 309.57, 278.57, 200.99, 199.90]
-                    problema = "Baixo nível de fluido de direção hidráulica"
-
 
         case 4:
             while True:
@@ -356,33 +315,23 @@ def mecanico():
                     print(
                         'Seu veículo está com ar no sistema de freios devido a sangramento inadequado')
                     precos = [120, 400, 175.99, 154.66, 309.99]
-                    problema = "Ar no sistema de freios devido a sangramento inadequado"
-                    
                 case 2:
                     print(
                         'Seu veículo está com pastilhas de freio desgastadas até o indicador de desgaste')
                     precos = [136, 454.03, 418.40, 253.90, 171.90]
-                    problema = "Pastilhas de freio desgastadas até o indicador de desgaste"
-                    
                 case 3:
                     print(
                         'Seu veículo está com discos de freio empenados devido a aquecimento excessivo')
                     precos = [297, 569.05, 268.90, 380.34, 337.90]
-                    problema = "Discos de freio empenados devido a aquecimento excessivo"
-                    
                 case 4:
                     print(
                         'Seu veículo está com desgaste desigual das pastilhas de freio')
                     precos = [150, 200, 300, 100]
-                    problema = "Desgaste desigual das pastilhas de freio"
-                    
                 case 5:
                     print(
                         'Seu veículo está com vazamento nos cilindros mestre ou cilindros de roda')
                     precos = [181.41, 179, 368.10, 213.75, 216.27]
-                    problema = "Vazamento nos cilindros mestre ou cilindros de roda"
-
-            return precos , problema
+    return precos
 
 def preco(precos):
     # definindo maior preço
@@ -417,7 +366,7 @@ def info_usuario(problema):
             "marca": input("Marca do carro: "),
             "modelo": input("Modelo: "),
             "ano": int(input("Ano: ")),
-            "problema" : ""
+            "problema": problema
         }
     }
 
@@ -425,22 +374,27 @@ def info_usuario(problema):
 banco_de_dados = []
 
 def criar():
-    banco_de_dados.append(info_usuario())
+    problema = eletrico_mecanico(0) 
+    banco_de_dados.append(info_usuario(problema))
     print("Registro adicionado!")
 
 def ler():
-    for i, registro in enumerate(banco_de_dados):
-        print(f"{i+1} - {registro}")
+    contador = 1
+    for registro in banco_de_dados:
+        print(f"{contador} - {registro}")
+        contador += 1
 
 def atualizar():
     cpf = input("CPF do usuário a atualizar: ")
     for registro in banco_de_dados:
         if registro["cpf"] == cpf:
             print("Atualizando registro...")
-            banco_de_dados[banco_de_dados.index(registro)] = info_usuario()
+            problema = eletrico_mecanico(0) 
+            banco_de_dados[banco_de_dados.index(registro)] = info_usuario(problema)
             print("Registro atualizado!")
             return
-    print("CPF não encontrado.")
+        else:
+            print("Registro não encontrado!")
 
 def deletar():
     cpf = input("CPF do usuário a deletar: ")
@@ -449,106 +403,37 @@ def deletar():
             banco_de_dados.remove(registro)
             print("Registro deletado!")
             return
-    print("CPF não encontrado.")
-
-def preco(precos):
-    # definindo maior preço
-    maior_preco = precos[0]
-    for preco in precos:
-        if preco > maior_preco:
-            maior_preco = preco
-
-# definindo menor preço
-    menor_preco = precos[0]
-    for preco in precos:
-        if preco < menor_preco:
-            menor_preco = preco
-
-# media dos precos
-    i = 0
-    soma = 0
-    for preco in range(len(precos)):
-        soma += precos[i]
-        i += 1
-    media = soma / len(precos)
-
-    return maior_preco, menor_preco, media
-
-def info_usuario(problema):
-    return {
-        "nome": input("Nome: "),
-        "cpf": input("CPF: "),
-        "telefone": input("Telefone: "),
-        "email": input("E-mail: "),
-        "carro": {
-            "marca": input("Marca do carro: "),
-            "modelo": input("Modelo: "),
-            "ano": int(input("Ano: ")),
-            "problema" : problema
-        }
-    }
-
-# Lista para armazenar os registros
-banco_de_dados = []
-
-def criar():
-    banco_de_dados.append(info_usuario())
-    print("Registro adicionado!")
-
-def ler():
-    for i, registro in enumerate(banco_de_dados):
-        print(f"{i+1} - {registro}")
-
-def atualizar():
-    cpf = input("CPF do usuário a atualizar: ")
-    for registro in banco_de_dados:
-        if registro["cpf"] == cpf:
-            print("Atualizando registro...")
-            banco_de_dados[banco_de_dados.index(registro)] = info_usuario()
-            print("Registro atualizado!")
-            return
-    print("CPF não encontrado.")
-
-def deletar():
-    cpf = input("CPF do usuário a deletar: ")
-    for registro in banco_de_dados:
-        if registro["cpf"] == cpf:
-            banco_de_dados.remove(registro)
-            print("Registro deletado!")
-            return
-    print("CPF não encontrado.")
+        else:
+            print("Registro não encontrado!")
 
 def processar_dados():
     regiao = localizacao()
-    tipoProblema = eletrico_mecanico()
+    tipoProblema = eletrico_mecanico(0) 
     if tipoProblema == 1:
         precos = eletrico()
     elif tipoProblema == 2:
         precos = mecanico()
     maior_preco, menor_preco, media = preco(precos)
-    
+    print(f'Problema detectado! \nTraga seu carro para alguma oficina credenciada da Porto Seguro na {regiao}'
+          f'\nO valor médio das peças para consertar seu veículo é de: R${media:.2f}'
+          f'\nPodendo variar de R${menor_preco:.2f} até R${maior_preco:.2f}')
+
 def menu():
     while True:
-        print("\n1. Criar\n2. Ler\n3. Atualizar\n4. Deletar\n5. Sair")
+        print("\n1. Criar\n2. Ler\n3. Atualizar\n4. Deletar\n5. Detectar Problemas\n6. Sair")
         opcao = input("Escolha: ")
 
         if opcao == "1":
-            info_usuario = info_usuario()
-            regiao = localizacao()
-            tipoProblema = eletrico_mecanico(tipoProblema)
-            if tipoProblema == 1:
-                precos = eletrico()
-            elif tipoProblema == 2:
-                precos = mecanico()
-            maior_preco, menor_preco, media = preco(precos)
-        elif opcao == "2":
             criar()
-        elif opcao == "3":
+        elif opcao == "2":
             ler()
-        elif opcao == "4":
+        elif opcao == "3":
             atualizar()
-        elif opcao == "5":
+        elif opcao == "4":
             deletar()
+        elif opcao == "5":
+            processar_dados()
+        elif opcao == "6":
             break
         else:
             print("Opção inválida, tente novamente.")
@@ -557,6 +442,3 @@ def menu():
 #       PRINCIPAL      #
 # ==================== #
 menu()
-# print(f'Problema detectado! \nTraga seu {info_carro["marca"]} {info_carro["modelo"]} para alguma oficina credenciada da Porto Seguro na {regiao}'
-#       f'\nO valor médio das peças para consertar seu veículo é de: R${media:.2f}'
-#       f'\nPodendo variar de R${menor_preco:.2f} até R${maior_preco:.2f}')
