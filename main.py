@@ -182,6 +182,74 @@ def deletar_veiculo(placa):
         return jsonify({"message": "Veículo deletado com sucesso"}), 200
     except Exception as e:
         return jsonify({"message": "Erro ao deletar veículo: " + str(e)}), 500
+    
+@app.route('/cadastro/<string:nome>/<string:cpf>/<string:cep>/<int:numero>/<string:logradouro>/<string:bairro>/<string:cidade>/<string:estado>/<string:email>/<string:senha>', methods=['POST'])
+def cadastrar_cliente(nome, cpf, cep, numero, logradouro, bairro, cidade, estado, email, senha):
+    # Validação dos dados
+    if not (nome and cpf and cep and numero and logradouro and bairro and cidade and estado and email and senha):
+        return jsonify({"message": "Dados incompletos para cadastro"}), 400
+
+    try:
+        connection = get_connection()
+        cursor = connection.cursor()
+
+        # Inserir endereço
+        cursor.execute('''
+            INSERT INTO tbl_endereco_challenge (logradouro, numero, cep, bairro, cidade, estado)
+            VALUES (:logradouro, :numero, :cep, :bairro, :cidade, :estado)
+        ''', {
+            'logradouro': logradouro,
+            'numero': numero,
+            'cep': cep,
+            'bairro': bairro,
+            'cidade': cidade,
+            'estado': estado
+        })
+        
+        # Obter o ID do endereço recém-inserido
+        cursor.execute("SELECT id_endereco FROM tbl_endereco_challenge WHERE cep = :cep", {'cep': cep})
+        id_endereco = cursor.fetchone()[0]
+
+        # Inserir cliente com o id_endereco
+        cursor.execute('''
+            INSERT INTO tbl_cliente_challenge (nome, cpf, id_endereco)
+            VALUES (:nome, :cpf, :id_endereco)
+        ''', {
+            'nome': nome,
+            'cpf': cpf,
+            'id_endereco': id_endereco
+        })
+
+        # Obter o ID do cliente recém-inserido
+        cursor.execute("SELECT id_cliente FROM tbl_cliente_challenge WHERE cpf = :cpf", {'cpf': cpf})
+        id_cliente = cursor.fetchone()[0]
+
+        # Inserir login com o id_cliente
+        cursor.execute('''
+            INSERT INTO tbl_login_challenge (email, senha, id_cliente)
+            VALUES (:email, :senha, :id_cliente)
+        ''', {
+            'email': email,
+            'senha': senha,
+            'id_cliente': id_cliente
+        })
+
+        # Confirmar todas as operações
+        connection.commit()
+
+        return jsonify({"message": "Cadastro realizado com sucesso!"}), 201
+
+    except Exception as e:
+        # Em caso de erro, apenas exibe a mensagem de erro sem rollback
+        return jsonify({"message": "Erro ao cadastrar cliente: " + str(e)}), 500
+
+    finally:
+        cursor.close()
+        connection.close()
+
+if __name__ == "__main__":
+    app.run(debug=True)
+
 
 # Endpoint de teste para verificar se o Flask está rodando
 @app.route('/test', methods=['GET'])
